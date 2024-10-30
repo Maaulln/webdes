@@ -22,17 +22,11 @@ function toggleDropdown() {
 }
 
 function showTab(tabId) {
-  // Hide all tab panels
-  document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.add('hidden'));
-  // Remove active styles from all tabs
-  document.querySelectorAll('.tab-button').forEach(button => button.classList.remove('border-b-2', 'text-gray-800'));
-  // Show the selected tab panel
-  document.getElementById(`content-${tabId}`).classList.remove('hidden');
-  // Add active styles to the selected tab
-  document.getElementById(`tab-${tabId}`).classList.add('border-b-2', 'text-gray-800');
-}
+  // Hapus class active dari semua tab dan tab panel
+  document.querySelectorAll(".tab-button").forEach((button) => button.classList.remove("active"));
+  document.querySelectorAll(".tab-panel").forEach((panel) => panel.classList.remove("active"));
 
-// Initialize by showing the first tab
-document.addEventListener('DOMContentLoaded', () => {
-  showTab('sejarah');
-});
+  // Tambahkan class active pada tab dan panel yang dipilih
+  document.getElementById("tab-" + tabId).classList.add("active");
+  document.getElementById("content-" + tabId).classList.add("active");
+}
