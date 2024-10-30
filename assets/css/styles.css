@@ -6,6 +6,10 @@ body {
 
 /* navbar */
 /* Style for Navbar Links */
+#navbar {
+  position: relative; /* Tambahkan ini untuk positioning dropdown */
+}
+
 #navbar a {
   font-size: 1rem;
   padding: 0.5rem 0.75rem;
@@ -13,7 +17,16 @@ body {
 
 /* Dropdown */
 #servicesDropdown {
-  z-index: 10;
+  position: absolute;
+  top: 100%; /* Tampilkan dropdown tepat di bawah elemen */
+  left: 0;   /* Pastikan dropdown berada di sebelah kiri tombol */
+  z-index: 1000;
+  display: none; /* Sembunyikan secara default */
+  margin-top: 0.5rem; /* Jarak antara tombol dan dropdown */
+}
+
+#servicesDropdown.show {
+  display: block; /* Tampilkan dropdown */
 }
 
 /* Style for Hamburger Menu */
@@ -39,7 +52,17 @@ body {
       display: block;
       padding: 0.5rem 1.5rem;
   }
+
+  .tab-button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+  }
 }
+
+  .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
 
 .header-bg {
   background-color: #f8f8f8;
@@ -56,31 +79,6 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 
-
 #profil-daerah {
   background: linear-gradient(to bottom, #f3f4f6, #ffffff);
-}
-
-/* Style untuk responsif */
-@media (max-width: 768px) {
-  #navbar {
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      flex-direction: column;
-      padding: 1rem 0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .tab-button {
-      font-size: 1rem;
-      padding: 0.75rem 1.5rem;
-  }
-
-  .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
-  }
 }
