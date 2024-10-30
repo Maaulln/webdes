@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pagelaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        
+    </style>
+</head>
+<body class="bg-white">
+    <header class="header-bg py-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-pacifico mb-4 md:mb-0">Pagelaran</h1>
+            <div class="flex items-center space-x-4">
+                <a class="text-gray-700 hover:text-green-600" href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="text-gray-700 hover:text-green-600" href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="text-gray-700 hover:text-green-600" href="#">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a class="text-gray-700 hover:text-green-600" href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="container mx-auto flex justify-center items-center mt-4">
+            <nav class="space-x-4 text-center">
+                <a class="text-gray-700 hover:text-green-600 block md:inline-block mx-5" href="#">Home</a>
+                <a class="text-gray-700 hover:text-green-600 block md:inline-block mx-5" href="#">News</a>
+                <a class="text-gray-700 hover:text-green-600 block md:inline-block mx-5" href="#">About</a>
+                <div class="relative inline-block text-left mx-5">
+                    <button type="button" onclick="toggleDropdown()" class="text-gray-700 hover:text-green-600 block md:inline-block">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <!-- Dropdown menu -->
+                    <div id="servicesDropdown" class="hidden absolute bg-white border border-gray-300 rounded-md shadow-lg mt-2 w-40">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Service 1</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Service 2</a>
+                    </div>
+                </div>
+                <a class="text-gray-700 hover:text-green-600 block md:inline-block" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-bg h-screen flex items-center justify-center relative">
+        <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="text-left text-white relative z-10 p-4 md:p-0 flex flex-col items-center">
+            <h2 class="text-lg mb-2">WELCOME TO PAGELARAN</h2>
+            <div class="pagelaran-text my-4">
+                <span class="text-white text-9xl font-normal font-['Covered_By_Your_Grace'] leading-none">Pagelaran</span>
+            </div>
+            <p class="max-w-lg my-5 text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+            <button class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700">Discover More</button>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-green-600 text-lg mb-2">Feature 01</h3>
+                <img alt="Image of new technology" class="mx-auto mb-4 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/8SpxNpW8u9YlCZhCH5DGTAh5IpeYNCW1MUB3OqlQie0fDQXnA.jpg" width="100"/>
+                <h2 class="mt-4">We're using a new technology</h2>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-green-600 text-lg mb-2">Feature 02</h3>
+                <img alt="Image of organic services" class="mx-auto mb-4 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/fJC8fbuf0efdVkiglWWmdysjZg0UmIVfYgmuSXj8QqleAB01JA.jpg" width="100"/>
+                <h2 class="mt-4">Good in smart organic services</h2>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-green-600 text-lg mb-2">Feature 03</h3>
+                <img alt="Image of system reform" class="mx-auto mb-4 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/ZEffHmNGTCvI6Up3lKpsfUBciK9fNInzqQdKiauDjJxPIguOB.jpg" width="100"/>
+                <h2 class="mt-4">Reforming in the systems</h2>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
