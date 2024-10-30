@@ -4,10 +4,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.logo {
+  font-family:'Covered By Your Grace', Latin ;
+}
 /* navbar */
 /* Style for Navbar Links */
 #navbar {
-  position: relative; /* Tambahkan ini untuk positioning dropdown */
+  position: relative;
 }
 
 #navbar a {
@@ -64,15 +67,22 @@ body {
       padding-right: 1rem;
   }
 
-.header-bg {
-  background-color: #f8f8f8;
+  .hero-bg {
+    background-image: url('../image/home.jpg'); /* Ganti dengan path gambar Anda */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Atur tinggi sesuai kebutuhan */
+    position: relative;
 }
 
-.hero-bg {
-  background-image: url('../image/home.jpg');
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
+.header {
+    background: none; /* Menghapus background dari header */
+    position: absolute; /* Agar header berada di atas hero-bg */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /* Pastikan header berada di atas hero-bg */
+    padding: 1rem; /* Atur padding sesuai kebutuhan */
 }
 
 .hero-overlay {
@@ -81,4 +91,14 @@ body {
 
 #profil-daerah {
   background: linear-gradient(to bottom, #f3f4f6, #ffffff);
+}
+.hidden {
+  display: none;
+}
+.content-container {
+  height: 600px; /* Set a fixed height */
+}
+.active {
+  border-bottom: 2px solid #3b82f6; /* Blue underline */
+  color: #3b82f6; /* Blue text */
 }
