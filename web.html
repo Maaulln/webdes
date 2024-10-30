@@ -16,7 +16,7 @@
 <body class="bg-white">
     <header class="header-bg py-4">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <h1 class="text-3xl font-pacifico mb-4 md:mb-0">Pagelaran</h1>
+            <h1 class="text-3xl font-pacifico mb-4 md:mb-0 font-['Covered_By_Your_Grace']">Pagelaran</h1>
             <div class="flex items-center space-x-4">
                 <a class="text-gray-700 hover:text-green-600" href="#">
                     <i class="fab fa-twitter"></i>
@@ -36,6 +36,7 @@
         <div class="container mx-auto flex justify-center items-center mt-4">
             <nav class="space-x-4 text-center">
                 <a class="text-gray-700 hover:text-green-600 block md:inline-block mx-5" href="#">Home</a>
+                <a class="text-gray-700 hover:text-green-600 block md:inline-block mx-5" href="#profil-daerah">Profil Daerah</a>
                 <a class="text-gray-700 hover:text-green-600 block md:inline-block mx-5" href="#">News</a>
                 <a class="text-gray-700 hover:text-green-600 block md:inline-block mx-5" href="#">About</a>
                 <div class="relative inline-block text-left mx-5">
@@ -57,7 +58,7 @@
     <section class="hero-bg h-screen flex items-center justify-center relative">
         <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
         <div class="text-left text-white relative z-10 p-4 md:p-0 flex flex-col items-center">
-            <h2 class="text-lg mb-2">WELCOME TO PAGELARAN</h2>
+            <h2 class="text-lg mb-2">WELCOME TO</h2>
             <div class="pagelaran-text my-4">
                 <span class="text-white text-9xl font-normal font-['Covered_By_Your_Grace'] leading-none">Pagelaran</span>
             </div>
@@ -87,6 +88,38 @@
             </div>
         </div>
     </section>
+
+    <section id="profil-daerah">
+    <h1 class="text-center justify-center">Profil-Daerah</h1>
+        <div class="bg-gray-100 flex items-center justify-center"> 
+
+        <div class="w-full max-w-5xl bg-white rounded-lg shadow-lg">
+            <!-- Tabs -->
+            <div class="flex space-x-4 border-b border-gray-200 px-6">
+                <button onclick="showTab('sejarah')" id="tab-sejarah" class="tab-button border-b-2 font-medium text-gray-500 py-3 transition duration-300" data-tab="sejarah">Sejarah</button>
+                <button onclick="showTab('geografi')" id="tab-geografi" class="tab-button text-gray-500 py-3 transition duration-300" data-tab="geografi">Geografi</button>
+                <button onclick="showTab('demografi')" id="tab-demografi" class="tab-button text-gray-500 py-3 transition duration-300" data-tab="demografi">Demografi</button>
+            </div>
+    
+            <!-- Content Area -->
+            <div class="tab-content mt-0 p-6 bg-gradient-to-b from-gray-100 to-gray-50 text-gray-700">
+                <!-- Sejarah Content -->
+                <div id="content-sejarah" class="tab-panel">
+                    <p>Desa Pagelaran memiliki sejarah panjang yang tercermin dari tradisi dan budaya yang masih lestari hingga kini. Berdasarkan cerita dari sesepuh desa, asal mula Desa Pagelaran erat kaitannya dengan sejarah Kerajaan Singhasari dan Majapahit. Banyak peninggalan sejarah yang tersebar di sekitar desa, seperti situs-situs bersejarah dan beberapa benda artefak yang ditemukan, menunjukkan adanya jejak peradaban kuno. Desa ini dulu menjadi bagian dari jalur perdagangan yang menghubungkan wilayah pesisir selatan dengan pusat kekuasaan di Malang, menjadikannya tempat penting dalam pergerakan ekonomi dan kebudayaan pada masa lampau.</p>
+                </div>
+                <!-- Geografi Content -->
+                <div id="content-geografi" class="tab-panel hidden">
+                    <p>Secara geografis, Desa Pagelaran berada di wilayah Kecamatan Pagelaran, Kabupaten Malang, dan dikelilingi oleh dataran rendah serta area pertanian yang subur. Desa ini memiliki aliran sungai kecil yang menjadi sumber irigasi alami untuk pertanian warga. Dengan iklim tropis yang memiliki musim hujan dan kemarau yang teratur, desa ini memiliki tanah yang subur, sehingga cocok untuk berbagai jenis tanaman pertanian. Kondisi alam yang hijau dan topografi yang relatif datar menjadikan desa ini memiliki potensi besar dalam sektor agraris dan wisata alam.</p>
+                </div>
+                <!-- Demografi Content -->
+                <div id="content-demografi" class="tab-panel hidden">
+                    <p>Desa Pagelaran dihuni oleh masyarakat yang beragam namun tetap menjunjung tinggi nilai gotong-royong dan kearifan lokal. Sebagian besar penduduknya bekerja sebagai petani, sementara sebagian lainnya terlibat dalam usaha kecil dan pekerjaan di sektor jasa. Mayoritas penduduk Desa Pagelaran adalah keturunan asli Jawa, dengan tradisi yang masih kental, mulai dari upacara adat hingga kegiatan sosial masyarakat. Dalam beberapa tahun terakhir, perkembangan teknologi mulai masuk ke desa ini, terutama di bidang pertanian modern dan pendidikan bagi generasi muda. Populasi desa ini didominasi oleh usia produktif, menjadikannya desa dengan potensi tenaga kerja yang cukup besar untuk mendukung pembangunan setempat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
 
     <script src="assets/js/script.js"></script>
 </body>
