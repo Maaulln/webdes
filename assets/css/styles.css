@@ -96,9 +96,15 @@ body {
   display: none;
 }
 .content-container {
-  height: 600px; /* Set a fixed height */
+  height: 600px; 
 }
 .active {
-  border-bottom: 2px solid #3b82f6; /* Blue underline */
-  color: #3b82f6; /* Blue text */
+  border-bottom: 2px solid rgb(22 163 74); 
+  color: rgb(22 163 74); 
+}
+
+/* News */
+#news {
+  max-height: 600px; /* Atur tinggi maksimum sesuai kebutuhan */
+  overflow-y: auto; /* Tambahkan scroll vertikal jika konten melebihi tinggi */
 }

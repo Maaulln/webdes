@@ -19,10 +19,10 @@
         
             <!-- Navbar -->
             <nav id="navbar" class="hidden md:flex space-x-8 items-center text-center">
-                <a class="text-gray-700 hover:text-green-600 block" href="#">Home</a>
-                <a class="text-gray-700 hover:text-green-600 block" href="#profile-daerah">Profil Daerah</a>
-                <a class="text-gray-700 hover:text-green-600 block" href="#">News</a>
-                <a class="text-gray-700 hover:text-green-600 block" href="#">About</a>
+                <a class="text-gray-800 hover:text-green-600 text-xl md:text-2xl" href="#">Home</a>
+                <a class="text-gray-800 hover:text-green-600 text-xl md:text-2xl" href="#profile-daerah">Profil Daerah</a>
+                <a class="text-gray-800 hover:text-green-600 text-xl md:text-2xl" href="#">News</a>
+                <a class="text-gray-800 hover:text-green-600 text-xl md:text-2xl" href="#">About</a>
                 
                 <!-- Services Dropdown Menu -->
                 <div class="relative text-gray-700 hover:text-green-600 block cursor-pointer flex items-center">
@@ -37,7 +37,7 @@
                 <a class="text-gray-700 hover:text-green-600 block" href="#">Contact</a>
             </nav>
 
-            <div class="space-x-4 ml-auto">
+            <div class="space-x-4 ml-auto flex flex-warp justify-center">
                 <a href="#" class="text-gray-800 hover:text-gray-600"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="text-gray-800 hover:text-gray-600"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="text-gray-800 hover:text-gray-600"><i class="fab fa-pinterest"></i></a>
@@ -56,24 +56,26 @@
             <p class="max-w-lg my-5 text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-            <button class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700">Discover More</button>
+            <button class="bg-green-600 text-white px-6 py-3 rounded-full transition-transform duration-300 ease-in transform hover:scale-105 hover:bg-green-700">
+                Discover More
+            </button>
         </div>
     </section>
 
     <section class="py-16 bg-white">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <h3 class="text-green-600 text-lg mb-2">Feature 01</h3>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
+                <h3 class="text-green-600 text-lg mb-2">Luas Daerah</h3>
                 <img alt="Image of new technology" class="mx-auto mb-4 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/8SpxNpW8u9YlCZhCH5DGTAh5IpeYNCW1MUB3OqlQie0fDQXnA.jpg" width="100"/>
                 <h2 class="mt-4">We're using a new technology</h2>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <h3 class="text-green-600 text-lg mb-2">Feature 02</h3>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
+                <h3 class="text-green-600 text-lg mb-2">Penduduk</h3>
                 <img alt="Image of organic services" class="mx-auto mb-4 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/fJC8fbuf0efdVkiglWWmdysjZg0UmIVfYgmuSXj8QqleAB01JA.jpg" width="100"/>
                 <h2 class="mt-4">Good in smart organic services</h2>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <h3 class="text-green-600 text-lg mb-2">Feature 03</h3>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
+                <h3 class="text-green-600 text-lg mb-2">Dusun</h3>
                 <img alt="Image of system reform" class="mx-auto mb-4 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/ZEffHmNGTCvI6Up3lKpsfUBciK9fNInzqQdKiauDjJxPIguOB.jpg" width="100"/>
                 <h2 class="mt-4">Reforming in the systems</h2>
             </div>
@@ -85,16 +87,13 @@
         <div class="bg-white bg-opacity-50 rounded-lg shadow-lg p-6 m-3 w-full content-container">
             <h1 class="text-2xl font-bold text-center mb-4">Profil Desa</h1>
             <div class="flex space-x-4 border-b border-gray-200 pb-2 mb-4">
-                <button id="btn-sejarah" class="text-gray-600 font-medium active" onclick="showContent('sejarah', 'btn-sejarah')">Sejarah</button>
-                <button id="btn-geografi" class="text-gray-600" onclick="showContent('geografi', 'btn-geografi')">Geografi</button>
-                <button id="btn-demografi" class="text-gray-600" onclick="showContent('demografi', 'btn-demografi')">Demografi</button>
+                <button id="btn-sejarah" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring2 focus:ring-gray-400" onclick="showContent('sejarah', 'btn-sejarah')">Sejarah</button>
+                <button id="btn-geografi" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('geografi', 'btn-geografi')">Geografi</button>
+                <button id="btn-demografi" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('demografi', 'btn-demografi')">Demografi</button>
             </div>
             <div id="sejarah" class="text-gray-800">
                 <p class="mb-4">Gresik sudah dikenal sejak abad ke-11 ketika tumbuh menjadi pusat perdagangan tidak saja antar pulau, tetapi sudah meluas keberbagai negara. Sebagai kota Bandar, gresik banyak dikunjungi pedagang Cina, Arab, Gujarat, Kalkuta, Siam, Bengali, Campa dan lain-lain. Gresik mulai tampil menonjol dalam peraturan sejarah sejak berkembangnya agama islam di tanah jawa. Pembawa dan penyebar agama islam tersebut tidak lain adalah Syech Maulana Malik Ibrahim yang bersama-sama Fatimah Binti Maimun masuk ke Gresik pada awal abad ke-11.</p>
                 <p class="mb-4">Sejak lahir dan berkembangnya kota Gresik selain berawal dari masuknya agama islam yang kemudian menyebar ke seluruh pulau jawa, tidak terlepas dari nama Nyai Ageng Pinatih, dari janda kaya raya yang juga seorang syahbandar, inilah nantinya akan kita temukan nama seseorang yang kemudian menjadi tonggak sejarah berdirinya kota gresik. Dia adalah seorang bayi asal Blambangan (Kabupaten Banyuwangi) yang dibuang ke laut oleh orang tuanya, dan ditemukan oleh para pelaut anak buah Nyai Ageng Pinatih yang kemudian diberi nama Jaka Samudra. Setelah perjaka bergelar raden paku yang kemudian menjadi penguasa pemerintah yang berpusat di Giri Kedato, dari tempat inilah beliau kemudian dikenal dengan panggilan Sunan Giri.</p>
-                <p class="mb-4">Kalau Syeh Maulana Malik Ibrahim pada jamannya dianggap sebagai para penguasa, tiang para raja dan menteri, maka sunan giri disamping kedudukannya sebagai seorang sunan atau wali (Penyebar Agama Islam) juga dianggap sebagai Sultan / Prabu (Penguasa Pemerintahan) Sunan Giri dikenal menjadi salah satu tokoh wali songo ini, juga dikenal dengan prabu Satmoto atau Sultan Ainul Yaqin. Tahun dimana beliau dinobatkan sebagai penguasaha pemerintahan(1487 M) akhirnya dijadikan sebagai hari lahirnya kota Gresik. Beliau memerintah gresik selama 30 tahun dan dilanjutkan oleh keturunanya sampai kurang lebih 200 tahun</p>
-                <p class="mb-4">Menjabat sebagai bupati yang pertama adalah Kyai Ngabehi Tumenggung Poesponegoro pada tahun 1617 saka, yang jasadnya dimakamkan di komplek makam Poesponegoro di jalan pahlawan gresik, satu komplek dengan makam Syech Maulana Malik Ibrahim.</p>
-                <p>Kota Gresik terkenal sebagai kota wali, hal ini ditandai dengan penggalian sejarah yang berkenaan dengan peranan dan keberadaan para wali yang makamnya di</p>
             </div>
             <div id="geografi" class="text-gray-800 hidden">
                 <p class="mb-4">Gresik terletak di pesisir utara Pulau Jawa, berbatasan dengan Laut Jawa di utara, Kabupaten Lamongan di barat, Kabupaten Mojokerto dan Kabupaten Sidoarjo di selatan, serta Kota Surabaya di timur. Gresik memiliki luas wilayah sekitar 1.191,25 km² dengan topografi yang bervariasi mulai dari dataran rendah hingga perbukitan.</p>
@@ -110,6 +109,53 @@
             </div>
         </div>    
     </section>
+
+    <section id="news" class="bg-gray-100 flex items-center justify-center">
+        <div class="bg-white bg-opacity-50 shadow-lg p-6 mx-4 my-auto w-full rounded-lg shadow-lg">
+            <div class="max-w-4xl mx-auto py-12 px-4">
+                <h1 class="text-4xl font-bold text-center mb-4">News</h1>
+                <p class="text-center text-gray-500 mb-12">
+                    We write about building startups and thoughts going on our mind.
+                </p>
+                <div class="space-y-12">
+                    <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
+                        <img alt="Abstract 3D shapes on a platform" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6" height="300" src="https://storage.googleapis.com/a1aa/image/MpItgvFttYZ7JxoBuXW3DJkRVyZa13LsCI53cBFU1GVBvC7E.jpg" width="400"/>
+                        <div>
+                            <span class="text-green-500 uppercase text-sm font-semibold">Courses</span>
+                            <h2 class="text-2xl font-bold mt-2">Introduction to the Essential Data Structures & Algorithms</h2>
+                            <p class="text-gray-500 mt-2">Marcell Ziemann · Wed Nov 09 2022</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
+                        <img alt="Code editor with code on the screen" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6" height="300" src="https://storage.googleapis.com/a1aa/image/kXuFeP06vx0VMqmQjvXlzHNaUmh66XGDI6sxCpnyoiLCeKsTA.jpg" width="400"/>
+                        <div>
+                            <span class="text-green-500 uppercase text-sm font-semibold">Tutorials</span>
+                            <h2 class="text-2xl font-bold mt-2">The Complete Guide to Full Stack Web Development</h2>
+                            <p class="text-gray-500 mt-2">Janette Lynch · Tue Nov 08 2022</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
+                        <img alt="Abstract 3D shapes on a platform" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6" height="300" src="https://storage.googleapis.com/a1aa/image/kXuFeP06vx0VMqmQjvXlzHNaUmh66XGDI6sxCpnyoiLCeKsTA.jpg" width="400"/>
+                        <div>
+                            <span class="text-green-500 uppercase text-sm font-semibold">Design</span>
+                            <h2 class="text-2xl font-bold mt-2">Exploring Modern Design Trends</h2>
+                            <p class="text-gray-500 mt-2">Alex Johnson · Mon Nov 07 2022</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
+                        <img alt="Person working on a laptop" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6" height="300" src="https://storage.googleapis.com/a1aa/image/kXuFeP06vx0VMqmQjvXlzHNaUmh66XGDI6sxCpnyoiLCeKsTA.jpg" width="400"/>
+                        <div>
+                            <span class="text-green-500 uppercase text-sm font-semibold">Productivity</span>
+                            <h2 class="text-2xl font-bold mt-2">Tips for Staying Productive While Working Remotely</h2>
+                            <p class="text-gray-500 mt-2">Sarah Lee · Sun Nov 06 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <script src="assets/js/script.js"></script>
 </body>
 </html>
