@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="bg-white">
-    <header class="bg-white py-4 fixed top-0 w-full z-50 shadow-md">
+    <header class="bg-white py-4 fixed top-0 w-full z-50 shadow-md" style="background-color: #85BDA6;">
         <div class="container mx-auto flex justify-between items-center px-4 md:px-8">
             <!-- Logo -->
-            <div class="text-3xl font-bold text-black">Pagelaran</div>
+            <div class="text-3xl font-bold text-white">Pagelaran</div>
 
             <!-- Hamburger Button untuk Mobile -->
             <button id="hamburgerButton" class="md:hidden text-gray-700 hover:text-green-600 focus:outline-none">
@@ -20,13 +20,13 @@
             </button>
 
             <!-- Mobile Menu -->
-            <nav id="mobileMenu" class="fixed top-16 right-0 w-full bg-white shadow-lg z-50 flex flex-col items-center hidden">
-                <a href="#" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">Home</a>
-                <a href="#profil-daerah" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">Profil Daerah</a>
-                <a href="#news" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">News</a>
-                <a href="#about" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">About</a>
-                <a href="#service" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">Services</a>
-                <a href="#contact" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">Contact</a>
+            <nav id="mobileMenu" class="fixed top-16 right-0 w-full bg-white shadow-lg z-50 flex flex-col items-center hidden" style="background-color: #2F4B26">
+                <a href="#" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">Home</a>
+                <a href="#profil-daerah" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">Profil Daerah</a>
+                <a href="#news" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">News</a>
+                <a href="#about" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">About</a>
+                <a href="#service" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">Services</a>
+                <a href="#contact" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">Contact</a>
             </nav>
 
             <!-- Desktop Navbar -->
@@ -69,36 +69,36 @@
     <section class="py-16 bg-white">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
-                <h3 class="text-green-600 text-lg mb-2">Luas Daerah</h3>
+                <h3 class="text-green-600 text-lg mb-2 font-bold">Luas Daerah</h3>
                 <p class="text-6xl p-3">100</p>
                 <h2 class="mt-4">We're using a new technology</h2>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
-                <h3 class="text-green-600 text-lg mb-2">Penduduk</h3>
-                <img alt="Image of organic services" class="mx-auto mb-4 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/fJC8fbuf0efdVkiglWWmdysjZg0UmIVfYgmuSXj8QqleAB01JA.jpg" width="100"/>
+                <h3 class="text-green-600 text-lg mb-2 text-strong font-bold">Penduduk</h3>
+                <p class="text-6xl p-3">900</p>
                 <h2 class="mt-4">Good in smart organic services</h2>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
-                <h3 class="text-green-600 text-lg mb-2">Dusun</h3>
-                <img alt="Image of system reform" class="mx-auto mb-4 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/ZEffHmNGTCvI6Up3lKpsfUBciK9fNInzqQdKiauDjJxPIguOB.jpg" width="100"/>
+                <h3 class="text-green-600 text-lg mb-2 font-semibold">Dusun</h3>
+                <p class="text-6xl p-3">30</p>
                 <h2 class="mt-4">Reforming in the systems</h2>
             </div>
         </div>
     </section>
 
     <!-- Profile-daerah -->
-    <section id="profile-daerah" class="bg-gray-100 flex items-center justify-center h-screen">
-        <div class="bg-white bg-opacity-50 rounded-lg shadow-lg p-6 m-3 w-full max-h-full content-container">
+    <section id="profile-daerah" class="bg-gray-100 py-16">
+        <div class="container mx-auto bg-white bg-opacity-50 rounded-lg shadow-lg p-6">
             <h1 class="text-2xl font-bold text-center mb-4">Profil Desa</h1>
             <div class="flex space-x-4 border-b border-gray-200 pb-2 mb-4">
-                <button id="btn-sejarah" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring2 focus:ring-gray-400" onclick="showContent('sejarah', 'btn-sejarah')">Sejarah</button>
+                <button id="btn-sejarah" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('sejarah', 'btn-sejarah')">Sejarah</button>
                 <button id="btn-geografi" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('geografi', 'btn-geografi')">Geografi</button>
                 <button id="btn-demografi" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('demografi', 'btn-demografi')">Demografi</button>
             </div>
-            <!-- Scrollable content container -->
-            <div class="overflow-y-scroll h-[300px] pr-4 scrollbar-hide">
+            <!-- Konten scrollable -->
+            <div class="overflow-y-scroll h-[300px] pr-4 custom-scrollbar">
                 <div id="sejarah" class="text-gray-800">
-                    <p class="mb-4">lorem500</p>
+                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor commodi cupiditate error unde numquam pariatur provident voluptatibus nostrum hic quidem incidunt, rem sed. Quos tempore ipsam, cum quis eaque accusamus optio voluptas quibusdam dicta suscipit aliquam quaerat! Ducimus magnam rerum non quidem enim autem numquam quas veritatis soluta odit, ex quia aliquam sequi nam. Facilis repudiandae voluptate in architecto? Aperiam nobis a ratione esse eius et vitae aliquid provident deleniti commodi amet, dignissimos dolorum? Corrupti voluptates temporibus quidem explicabo. Dolorum ab aperiam unde velit dolores praesentium quaerat, magni, quod facilis rerum mollitia voluptas. Quasi repudiandae, fugit eaque repellat natus placeat error nemo. Sed cum maiores amet esse voluptates voluptas laborum quis reprehenderit sit dolore omnis recusandae, voluptatum fugiat expedita non debitis repudiandae rem et tempore eligendi delectus sequi. Et, dignissimos perferendis facilis omnis, reiciendis quae rerum blanditiis, non voluptatem accusantium quia deleniti vitae accusamus nesciunt minus cupiditate maxime inventore. Fuga aspernatur, earum aut vitae excepturi sint doloremque architecto, repellat iure dignissimos laboriosam iusto asperiores consectetur! Blanditiis error corrupti obcaecati facere voluptatibus consequuntur molestiae voluptatum placeat nulla aspernatur, eligendi a aut. Aliquam impedit deserunt quam, quaerat consectetur in mollitia deleniti maiores non quisquam sed quo doloremque eius, ab, velit quidem. Voluptas cumque enim provident ab nulla pariatur accusamus numquam praesentium blanditiis, dolores corporis quia saepe eaque aperiam nostrum cupiditate ex aspernatur omnis temporibus similique modi dolor nobis fugit! Modi delectus impedit, nesciunt architecto ut laudantium doloribus, aut praesentium porro rem sit! Delectus totam fugiat quas obcaecati quidem iste pariatur, quam cupiditate velit laboriosam repellat laborum culpa quos earum quod id consequuntur quasi vero. Tempora nostrum impedit numquam commodi nulla rerum libero hic nihil, nisi architecto quos quo optio accusantium facilis eligendi mollitia. Molestiae magni molestias eligendi excepturi incidunt numquam sunt adipisci nobis, iure dolores vitae eaque at odio optio accusantium atque repellendus sequi! Distinctio consequatur sit nulla, temporibus in sed ipsum doloremque error. Incidunt libero voluptate quibusdam magni, deleniti nesciunt voluptates pariatur iure ipsam? Nostrum, nesciunt maxime molestias veniam placeat, temporibus eius excepturi fugit adipisci est beatae ab reiciendis optio commodi rerum nulla labore iure praesentium? Accusantium dolor eius laudantium nulla exercitationem consequuntur nisi ipsam earum dolorum quae! Tenetur atque facilis culpa beatae inventore harum eos? Unde ea, eius, mollitia beatae atque assumenda debitis quia quae asperiores consequatur cumque ex rerum? Quis quam consequuntur provident doloribus, eius optio saepe nam unde obcaecati dolore totam sapiente consequatur, ipsa velit dignissimos asperiores cum iste ullam non! Velit omnis ut eius exercitationem culpa ad, voluptates dolor quibusdam eligendi et unde, magnam eum amet non id deleniti sunt harum sapiente eos similique ipsa molestias impedit vel. Rerum soluta inventore eaque tempore dignissimos quam ipsum nam rem nemo et, quo vel quos pariatur. Et, ea voluptate veritatis dolorum soluta ullam neque voluptas sequi obcaecati ex. Tempora, recusandae officiis deleniti nostrum labore iure qui perspiciatis eius odio eos ea pariatur distinctio natus ad ab eligendi ullam, expedita repellat earum nemo asperiores reiciendis? Modi, recusandae, laborum maiores enim aperiam assumenda temporibus hic sapiente placeat quaerat laudantium magnam? Optio?</p>
                 </div>
                 <div id="geografi" class="text-gray-800 hidden">
                     <p class="mb-4">Gresik terletak di pesisir utara Pulau Jawa, berbatasan dengan Laut Jawa di utara...</p>
@@ -160,17 +160,15 @@
         <div class="bg-gray-100 flex items-center justify-center my-5"> 
             <div class="bg-white bg-opacity-50 shadow-lg p-6 mx-4 my-auto w-full rounded-lg shadow-lg">
                 <div class="max-w-4xl mx-auto py-12 px-4">
-                    <h1>
-                        <span class="text-center text-4xl font-bold mb-4">About Us</span>
+                    <h1 class="text-center">
+                        <span class="text-4xl font-bold mb-4">About Us</span>
                     </h1>
                     <p class="text-center text-gray-500 mb-12">
                         We are a team of passionate individuals who are dedicated to helping others learn and grow.
                     </p>
                     <div class="flex flex-wrap justify-center">
-                        <div class="w-full md:w-1/2 lg:w-1/3 xl
-                        :w-1/4 p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit optio odio animi tenetur ducimus perspiciatis nisi tempore porro asperiores iusto.</div>
-                        <div class="w-full md:w-1/2 lg:w-1/3 xl
-                        :w-1/4 p-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora voluptatem fugiat vel ducimus temporibus velit provident possimus voluptatum porro.</div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit optio odio animi tenetur ducimus perspiciatis nisi tempore porro asperiores iusto.</div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora voluptatem fugiat vel ducimus temporibus velit provident possimus voluptatum porro.</div>
                     </div>
                 </div>
             </div>

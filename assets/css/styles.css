@@ -1,14 +1,16 @@
+/* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Quicksand:wght@300..700&display=swap');
 
+/* Global Styles */
 body {
   font-family: 'Roboto', sans-serif;
 }
 
 .logo {
-  font-family:'Covered By Your Grace', Latin ;
+  font-family: 'Covered By Your Grace', sans-serif;
 }
-/* navbar */
-/* Style for Navbar Links */
+
+/* Navbar */
 #navbar {
   position: relative;
 }
@@ -18,106 +20,111 @@ body {
   padding: 0.5rem 0.75rem;
 }
 
-/* Dropdown */
+/* Dropdown Menu */
 #servicesDropdown {
   position: absolute;
-  top: 100%; /* Tampilkan dropdown tepat di bawah elemen */
-  left: 0;   /* Pastikan dropdown berada di sebelah kiri tombol */
+  top: 100%;
+  left: 0;
   z-index: 1000;
-  display: none; /* Sembunyikan secara default */
-  margin-top: 0.5rem; /* Jarak antara tombol dan dropdown */
+  display: none;
+  margin-top: 0.5rem;
 }
 
 #servicesDropdown.show {
-  display: block; /* Tampilkan dropdown */
+  display: block;
 }
 
-/* Style for Hamburger Menu */
+/* Hamburger Button */
 #hamburgerButton {
   font-size: 1.5rem;
 }
 
-/* Responsive Navbar for Mobile */
+/* Responsive Navbar */
 @media (max-width: 768px) {
   #navbar {
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      flex-direction: column;
-      padding: 1rem 0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   #navbar a,
   #navbar .relative {
-      display: block;
-      padding: 0.5rem 1.5rem;
+    display: block;
+    padding: 0.5rem 1.5rem;
   }
 
   .tab-button {
-      font-size: 1rem;
-      padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
   }
 }
 
-  .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
-  }
+/* Container */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
-  .hero-bg {
-    background-image: url('../image/home.jpg'); /* Ganti dengan path gambar Anda */
-    background-size: cover;
-    background-position: center;
-    height: 400px; /* Atur tinggi sesuai kebutuhan */
-    position: relative;
+/* Hero Section */
+.hero-bg {
+  background-image: url('../image/home.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
 }
 
 .header {
-    background: none; /* Menghapus background dari header */
-    position: absolute; /* Agar header berada di atas hero-bg */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1; /* Pastikan header berada di atas hero-bg */
-    padding: 1rem; /* Atur padding sesuai kebutuhan */
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 1rem;
 }
 
 .hero-overlay {
   background: rgba(0, 0, 0, 0.4);
 }
 
+/* Profil Daerah Section */
 #profil-daerah {
   background: linear-gradient(to bottom, #f3f4f6, #ffffff);
 }
+
+/* Utility Classes */
 .hidden {
   display: none;
 }
+
 .content-container {
-  height: 600px; 
-}
-.active {
-  border-bottom: 2px solid rgb(22 163 74); 
-  color: rgb(22 163 74); 
+  height: 600px;
 }
 
-/* News */
+.active {
+  border-bottom: 2px solid rgb(22 163 74);
+  color: rgb(22 163 74);
+}
+
+/* News Section */
 #news {
-  max-height: 600px; 
-  overflow-y: auto; 
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+}
+
+#news::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+.custom-scrollbar {
   scrollbar-width: none;
 }
-#news::-webkit-scrollbar {
+.custom-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-/* Custom CSS to hide scrollbar */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
 }
