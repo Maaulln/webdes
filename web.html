@@ -9,42 +9,46 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="bg-white">
-    <header class="bg-opacity-50 py-4">
-        <div class="container mx-auto flex justify-center items-center mt-4">
-            <div class="logo text-3xl text-black mr-auto">Pagelaran</div>
-            <!-- Hamburger Menu -->
-            <button id="hamburgerButton" class="md:hidden text-gray-700 hover:text-green-600">
+    <header class="bg-white py-4 fixed top-0 w-full z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4 md:px-8">
+            <!-- Logo -->
+            <div class="text-3xl font-bold text-black">Pagelaran</div>
+
+            <!-- Hamburger Button untuk Mobile -->
+            <button id="hamburgerButton" class="md:hidden text-gray-700 hover:text-green-600 focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
-        
-            <!-- Navbar -->
-            <nav id="navbar" class="hidden md:flex space-x-8 items-center text-center">
-                <a class="text-gray-800 hover:text-green-600 text-xl md:text-2xl" href="#">Home</a>
-                <a class="text-gray-800 hover:text-green-600 text-xl md:text-2xl" href="#profile-daerah">Profil Daerah</a>
-                <a class="text-gray-800 hover:text-green-600 text-xl md:text-2xl" href="#">News</a>
-                <a class="text-gray-800 hover:text-green-600 text-xl md:text-2xl" href="#">About</a>
-                
-                <!-- Services Dropdown Menu -->
-                <div class="relative text-gray-700 hover:text-green-600 block cursor-pointer flex items-center">
-                    <button onclick="toggleDropdown()">Services <i class="fa fa-chevron-down"></i></button>
-                    <!-- Dropdown -->
-                    <div id="servicesDropdown" class="hidden bg-white border border-gray-300 rounded-md shadow-lg mt-2 w-40">
-                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Service 1</a>
-                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Service 2</a>
-                    </div>
-                </div>
-                
-                <a class="text-gray-700 hover:text-green-600 block" href="#">Contact</a>
+
+            <!-- Mobile Menu -->
+            <nav id="mobileMenu" class="fixed top-16 right-0 w-full bg-white shadow-lg z-50 flex flex-col items-center hidden">
+                <a href="#" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">Home</a>
+                <a href="#profil-daerah" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">Profil Daerah</a>
+                <a href="#news" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">News</a>
+                <a href="#about" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">About</a>
+                <a href="#service" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">Services</a>
+                <a href="#contact" class="py-2 px-4 w-full text-gray-700 hover:bg-green-600 hover:text-white text-center">Contact</a>
             </nav>
 
-            <div class="space-x-4 ml-auto flex flex-warp justify-center">
-                <a href="#" class="text-gray-800 hover:text-gray-600"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-gray-800 hover:text-gray-600"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-gray-800 hover:text-gray-600"><i class="fab fa-pinterest"></i></a>
-                <a href="#" class="text-gray-800 hover:text-gray-600"><i class="fab fa-instagram"></i></a>
+            <!-- Desktop Navbar -->
+            <nav id="navbar" class="hidden md:flex space-x-6 items-center text-lg">
+                <a class="text-gray-800 hover:text-green-600" href="#home">Home</a>
+                <a class="text-gray-800 hover:text-green-600" href="#profil-daerah">Profil Daerah</a>
+                <a class="text-gray-800 hover:text-green-600" href="#news">News</a>
+                <a class="text-gray-800 hover:text-green-600" href="#about">About</a>
+                <a class="text-gray-800 hover:text-green-600" href="#services">Service</a>
+                <a class="text-gray-800 hover:text-green-600" href="#contact">Contact</a>
+            </nav>
+
+            <!-- Social Media Icons -->
+            <div class="hidden md:flex space-x-4 text-gray-800">
+                <a href="#" class="hover:text-gray-600"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-gray-600"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-gray-600"><i class="fab fa-pinterest"></i></a>
+                <a href="#" class="hover:text-gray-600"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </header>
+
 
     <section class="hero-bg h-screen flex items-center justify-center relative">
         <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
@@ -66,7 +70,7 @@
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
                 <h3 class="text-green-600 text-lg mb-2">Luas Daerah</h3>
-                <img alt="Image of new technology" class="mx-auto mb-4 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/8SpxNpW8u9YlCZhCH5DGTAh5IpeYNCW1MUB3OqlQie0fDQXnA.jpg" width="100"/>
+                <p class="text-6xl p-3">100</p>
                 <h2 class="mt-4">We're using a new technology</h2>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
@@ -83,32 +87,29 @@
     </section>
 
     <!-- Profile-daerah -->
-    <section id="profile-daerah" class="bg-gray-100 flex items-center justify-center">
-        <div class="bg-white bg-opacity-50 rounded-lg shadow-lg p-6 m-3 w-full content-container">
+    <section id="profile-daerah" class="bg-gray-100 flex items-center justify-center h-screen">
+        <div class="bg-white bg-opacity-50 rounded-lg shadow-lg p-6 m-3 w-full max-h-full content-container">
             <h1 class="text-2xl font-bold text-center mb-4">Profil Desa</h1>
             <div class="flex space-x-4 border-b border-gray-200 pb-2 mb-4">
                 <button id="btn-sejarah" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring2 focus:ring-gray-400" onclick="showContent('sejarah', 'btn-sejarah')">Sejarah</button>
                 <button id="btn-geografi" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('geografi', 'btn-geografi')">Geografi</button>
                 <button id="btn-demografi" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('demografi', 'btn-demografi')">Demografi</button>
             </div>
-            <div id="sejarah" class="text-gray-800">
-                <p class="mb-4">Gresik sudah dikenal sejak abad ke-11 ketika tumbuh menjadi pusat perdagangan tidak saja antar pulau, tetapi sudah meluas keberbagai negara. Sebagai kota Bandar, gresik banyak dikunjungi pedagang Cina, Arab, Gujarat, Kalkuta, Siam, Bengali, Campa dan lain-lain. Gresik mulai tampil menonjol dalam peraturan sejarah sejak berkembangnya agama islam di tanah jawa. Pembawa dan penyebar agama islam tersebut tidak lain adalah Syech Maulana Malik Ibrahim yang bersama-sama Fatimah Binti Maimun masuk ke Gresik pada awal abad ke-11.</p>
-                <p class="mb-4">Sejak lahir dan berkembangnya kota Gresik selain berawal dari masuknya agama islam yang kemudian menyebar ke seluruh pulau jawa, tidak terlepas dari nama Nyai Ageng Pinatih, dari janda kaya raya yang juga seorang syahbandar, inilah nantinya akan kita temukan nama seseorang yang kemudian menjadi tonggak sejarah berdirinya kota gresik. Dia adalah seorang bayi asal Blambangan (Kabupaten Banyuwangi) yang dibuang ke laut oleh orang tuanya, dan ditemukan oleh para pelaut anak buah Nyai Ageng Pinatih yang kemudian diberi nama Jaka Samudra. Setelah perjaka bergelar raden paku yang kemudian menjadi penguasa pemerintah yang berpusat di Giri Kedato, dari tempat inilah beliau kemudian dikenal dengan panggilan Sunan Giri.</p>
+            <!-- Scrollable content container -->
+            <div class="overflow-y-scroll h-[300px] pr-4 scrollbar-hide">
+                <div id="sejarah" class="text-gray-800">
+                    <p class="mb-4">lorem500</p>
+                </div>
+                <div id="geografi" class="text-gray-800 hidden">
+                    <p class="mb-4">Gresik terletak di pesisir utara Pulau Jawa, berbatasan dengan Laut Jawa di utara...</p>
+                </div>
+                <div id="demografi" class="text-gray-800 hidden">
+                    <p class="mb-4">Berdasarkan data sensus terbaru, jumlah penduduk Gresik mencapai sekitar 1,3 juta jiwa...</p>
+                </div>
             </div>
-            <div id="geografi" class="text-gray-800 hidden">
-                <p class="mb-4">Gresik terletak di pesisir utara Pulau Jawa, berbatasan dengan Laut Jawa di utara, Kabupaten Lamongan di barat, Kabupaten Mojokerto dan Kabupaten Sidoarjo di selatan, serta Kota Surabaya di timur. Gresik memiliki luas wilayah sekitar 1.191,25 km² dengan topografi yang bervariasi mulai dari dataran rendah hingga perbukitan.</p>
-                <p class="mb-4">Kota ini memiliki iklim tropis dengan dua musim, yaitu musim hujan dan musim kemarau. Curah hujan tahunan rata-rata berkisar antara 1.500 hingga 2.000 mm, dengan suhu rata-rata harian sekitar 27°C. Gresik juga dikenal dengan tanahnya yang subur, cocok untuk pertanian dan perkebunan.</p>
-                <p class="mb-4">Selain itu, Gresik juga memiliki beberapa sungai besar yang mengalir melalui wilayahnya, seperti Sungai Bengawan Solo dan Sungai Lamong. Sungai-sungai ini berperan penting dalam irigasi pertanian serta sebagai jalur transportasi air.</p>
-                <p class="mb-4">Gresik juga memiliki beberapa kawasan industri yang berkembang pesat, terutama di sektor petrokimia, semen, dan makanan. Kawasan industri ini memberikan kontribusi besar terhadap perekonomian daerah dan menyediakan lapangan kerja bagi penduduk setempat.</p>
-            </div>
-            <div id="demografi" class="text-gray-800 hidden">
-                <p class="mb-4">Berdasarkan data sensus terbaru, jumlah penduduk Gresik mencapai sekitar 1,3 juta jiwa. Mayoritas penduduknya adalah suku Jawa, dengan agama Islam sebagai agama yang dominan. Selain itu, terdapat pula komunitas Tionghoa dan Arab yang telah lama menetap di Gresik.</p>
-                <p class="mb-4">Gresik memiliki tingkat pertumbuhan penduduk yang cukup tinggi, didorong oleh urbanisasi dan perkembangan industri. Hal ini menyebabkan meningkatnya kebutuhan akan fasilitas umum seperti pendidikan, kesehatan, dan perumahan.</p>
-                <p class="mb-4">Pendidikan di Gresik cukup maju dengan adanya berbagai sekolah dan perguruan tinggi yang berkualitas. Beberapa universitas ternama juga memiliki kampus cabang di Gresik, menarik mahasiswa dari berbagai daerah.</p>
-                <p class="mb-4">Di bidang kesehatan, Gresik memiliki beberapa rumah sakit dan pusat kesehatan yang melayani kebutuhan medis penduduk. Pemerintah daerah juga aktif dalam program-program kesehatan masyarakat untuk meningkatkan kualitas hidup warga.</p>
-            </div>
-        </div>    
+        </div>
     </section>
+    
 
     <section id="news" class="bg-gray-100 flex items-center justify-center">
         <div class="bg-white bg-opacity-50 shadow-lg p-6 mx-4 my-auto w-full rounded-lg shadow-lg">
@@ -155,6 +156,91 @@
         </div>
     </section>
     
+    <section id="about">
+        <div class="bg-gray-100 flex items-center justify-center my-5"> 
+            <div class="bg-white bg-opacity-50 shadow-lg p-6 mx-4 my-auto w-full rounded-lg shadow-lg">
+                <div class="max-w-4xl mx-auto py-12 px-4">
+                    <h1>
+                        <span class="text-center text-4xl font-bold mb-4">About Us</span>
+                    </h1>
+                    <p class="text-center text-gray-500 mb-12">
+                        We are a team of passionate individuals who are dedicated to helping others learn and grow.
+                    </p>
+                    <div class="flex flex-wrap justify-center">
+                        <div class="w-full md:w-1/2 lg:w-1/3 xl
+                        :w-1/4 p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit optio odio animi tenetur ducimus perspiciatis nisi tempore porro asperiores iusto.</div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 xl
+                        :w-1/4 p-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora voluptatem fugiat vel ducimus temporibus velit provident possimus voluptatum porro.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service" class="bg-gray-100 py-10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">Form Pengaduan</h2>
+            <form class="bg-white shadow-md rounded-lg px-8 py-6">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-semibold mb-2">Nama</label>
+                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Masukkan nama Anda">
+                </div>
+                <div class="mb-4">
+                    <label for="nik" class="block text-sm font-semibold mb-2">NIK</label>
+                    <input type="text" id="nik" name="nik" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Masukkan NIK Anda">
+                </div>
+                <div class="mb-4">
+                    <label for="address" class="block text-sm font-semibold mb-2">Alamat (RT/RW)</label>
+                    <input type="text" id="address" name="address" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Masukkan alamat Anda (RT/RW)">
+                </div>
+                <div class="mb-4">
+                    <label for="complaint" class="block text-sm font-semibold mb-2">Keluhan</label>
+                    <textarea id="complaint" name="complaint" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" placeholder="Tuliskan keluhan Anda"></textarea>
+                </div>
+                <div class="flex justify-center">
+                    <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Kirim
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-gray-100 py-10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">Kontak Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Informasi Kontak</h3>
+                    <p class="text-gray-700 mb-2"><strong>Alamat:</strong> Jl. Contoh No.123, Jakarta</p>
+                    <p class="text-gray-700 mb-2"><strong>Telepon:</strong> (021) 123-4567</p>
+                    <p class="text-gray-700 mb-2"><strong>Email:</strong> info@contoh.com</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Kirim Pesan</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="contact-name" class="block text-sm font-semibold mb-2">Nama</label>
+                            <input type="text" id="contact-name" name="contact-name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Masukkan nama Anda">
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact-email" class="block text-sm font-semibold mb-2">Email</label>
+                            <input type="email" id="contact-email" name="contact-email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Masukkan email Anda">
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact-message" class="block text-sm font-semibold mb-2">Pesan</label>
+                            <textarea id="contact-message" name="contact-message" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" placeholder="Tuliskan pesan Anda"></textarea>
+                        </div>
+                        <div class="flex justify-center">
+                            <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                Kirim Pesan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <script src="assets/js/script.js"></script>
 </body>

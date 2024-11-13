@@ -105,6 +105,19 @@ body {
 
 /* News */
 #news {
-  max-height: 600px; /* Atur tinggi maksimum sesuai kebutuhan */
-  overflow-y: auto; /* Tambahkan scroll vertikal jika konten melebihi tinggi */
+  max-height: 600px; 
+  overflow-y: auto; 
+  scrollbar-width: none;
+}
+#news::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom CSS to hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
