@@ -1,18 +1,17 @@
 function toggleNavbar() {
   const navbar = document.getElementById('navbar');
-  navbar.classList.toggle('hidden'); // Toggles the hidden class
+  navbar.classList.toggle('hidden');
 }
 
 function toggleDropdown() {
   const dropdown = document.getElementById('servicesDropdown');
-  dropdown.classList.toggle('show'); // Toggles the show class
+  dropdown.classList.toggle('show');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
         const hamburgerButton = document.getElementById('hamburgerButton');
         const mobileMenu = document.getElementById('mobileMenu');
 
-        // Event listener untuk klik tombol hamburger
         hamburgerButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // profil-daerah
 function showTab(tabName) {
-  // Remove active class from all buttons and contents
   document.querySelectorAll('.tab-button').forEach(btn => {
       btn.classList.remove('active');
   });
@@ -29,14 +27,12 @@ function showTab(tabName) {
       content.classList.add('hidden');
   });
 
-  // Add active class to selected button and content
   document.getElementById(`${tabName}-tab`).classList.add('active');
   let activeContent = document.getElementById(`${tabName}-content`);
   activeContent.classList.remove('hidden');
   activeContent.classList.add('active');
 }
 
-// Set Sejarah as default active tab
 showTab('sejarah');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const animateNumber = (element) => {
       const value = parseInt(element.getAttribute('data-value'));
-      const duration = 1500; // Total animation duration in ms
-      const interval = 50; // Update interval
+      const duration = 1500;
+      const interval = 50;
       const steps = duration / interval;
       const increment = value / steps;
 
@@ -63,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
       updateNumber();
   };
 
-  // Intersection Observer to trigger animation when section is in view
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -73,6 +68,5 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }, { threshold: 0.1 });
 
-  // Observe the parent container
   observer.observe(document.querySelector('section'));
 });

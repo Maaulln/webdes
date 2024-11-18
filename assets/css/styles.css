@@ -1,7 +1,5 @@
-/* Import Font */
 @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Quicksand:wght@300..700&display=swap");
 
-/* Global Styles */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -10,7 +8,6 @@ body {
   font-family: "Covered By Your Grace", sans-serif;
 }
 
-/* Navbar */
 #navbar {
   position: relative;
 }
@@ -34,7 +31,6 @@ body {
   display: block;
 }
 
-/* Hamburger Button */
 #hamburgerButton {
   font-size: 1.5rem;
 }
@@ -64,7 +60,6 @@ body {
   }
 }
 
-/* Container */
 .container {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -93,7 +88,6 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 
-/* Profil Daerah Section */
 #profil-daerah {
   background: linear-gradient(to bottom, #f3f4f6, #ffffff);
 }
@@ -112,15 +106,14 @@ body {
   color: rgb(22 163 74);
 }
 
-/* News Section */
 #news {
   max-height: 600px;
   overflow-y: auto;
-  scrollbar-width: none; /* For Firefox */
+  scrollbar-width: none;
 }
 
 #news::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Edge */
+  display: none;
 }
 .custom-scrollbar {
   scrollbar-width: none;
@@ -140,12 +133,12 @@ body {
 /* animasi angka */
 @keyframes numberAnimation {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
