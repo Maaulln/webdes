@@ -19,31 +19,60 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 // profil-daerah
-function showContent(section, buttonId) {
-  document.getElementById('sejarah').classList.add('hidden');
-  document.getElementById('geografi').classList.add('hidden');
-  document.getElementById('demografi').classList.add('hidden');
-  document.getElementById(section).classList.remove('hidden');
+function showTab(tabName) {
+  // Remove active class from all buttons and contents
+  document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+  });
+  document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+      content.classList.add('hidden');
+  });
 
-  document.getElementById('btn-sejarah').classList.remove('active');
-  document.getElementById('btn-geografi').classList.remove('active');
-  document.getElementById('btn-demografi').classList.remove('active');
-  document.getElementById(buttonId).classList.add('active');
+  // Add active class to selected button and content
+  document.getElementById(`${tabName}-tab`).classList.add('active');
+  let activeContent = document.getElementById(`${tabName}-content`);
+  activeContent.classList.remove('hidden');
+  activeContent.classList.add('active');
 }
 
-// Mendapatkan elemen header
-        const header = document.getElementById('header');
+// Set Sejarah as default active tab
+showTab('sejarah');
 
-        // Fungsi untuk mengubah warna header berdasarkan scroll
-        window.addEventListener('scroll', () => {
-            const homeSection = document.getElementById('home');
-            const homeSectionBottom = homeSection.offsetHeight;
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedNumbers = document.querySelectorAll('.animate-number');
 
-            if (window.scrollY > homeSectionBottom) {
-                header.classList.remove('bg-white', 'text-black');
-                header.classList.add('bg-gray-800', 'text-white');
-            } else {
-                header.classList.remove('bg-gray-800', 'text-white');
-                header.classList.add('bg-white', 'text-black');
-            }
-        });
+  const animateNumber = (element) => {
+      const value = parseInt(element.getAttribute('data-value'));
+      const duration = 1500; // Total animation duration in ms
+      const interval = 50; // Update interval
+      const steps = duration / interval;
+      const increment = value / steps;
+
+      let currentValue = 0;
+      const updateNumber = () => {
+          currentValue += increment;
+          if (currentValue < value) {
+              element.textContent = Math.round(currentValue).toLocaleString();
+              requestAnimationFrame(updateNumber);
+          } else {
+              element.textContent = value.toLocaleString();
+          }
+      };
+
+      updateNumber();
+  };
+
+  // Intersection Observer to trigger animation when section is in view
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              animatedNumbers.forEach(animateNumber);
+              observer.unobserve(entry.target);
+          }
+      });
+  }, { threshold: 0.1 });
+
+  // Observe the parent container
+  observer.observe(document.querySelector('section'));
+});

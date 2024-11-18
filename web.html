@@ -7,44 +7,42 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body class="bg-white">
-    <header class="bg-white py-4 fixed top-0 w-full z-50 shadow-md" style="background-color: #85BDA6;">
+    <header class="bg-[#85BDA6] py-4 fixed top-0 w-full z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center px-4 md:px-8">
             <!-- Logo -->
             <div class="text-3xl font-bold text-white">Pagelaran</div>
 
-            <!-- Hamburger Button untuk Mobile -->
-            <button id="hamburgerButton" class="md:hidden text-gray-700 hover:text-green-600 focus:outline-none">
+            <!-- Hamburger Button for Mobile -->
+            <button id="hamburgerButton" class="md:hidden text-white hover:text-green-200 focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
 
             <!-- Mobile Menu -->
-            <nav id="mobileMenu" class="fixed top-16 right-0 w-full bg-white shadow-lg z-50 flex flex-col items-center hidden" style="background-color: #2F4B26">
-                <a href="#" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">Home</a>
-                <a href="#profil-daerah" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">Profil Daerah</a>
-                <a href="#news" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">News</a>
-                <a href="#about" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">About</a>
-                <a href="#service" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">Services</a>
-                <a href="#contact" class="py-2 px-4 w-full text-white hover:bg-green-600 hover:text-white text-center">Contact</a>
+            <nav id="mobileMenu" class="fixed top-16 right-0 w-full bg-[#2F4B26] z-50 flex flex-col items-center md:hidden">
+                <a href="#" class="py-2 px-4 w-full text-white hover:bg-green-600 text-center">Home</a>
+                <a href="#profil-daerah" class="py-2 px-4 w-full text-white hover:bg-green-600 text-center">Profil Daerah</a>
+                <a href="#news" class="py-2 px-4 w-full text-white hover:bg-green-600 text-center">News</a>
+                <a href="#about" class="py-2 px-4 w-full text-white hover:bg-green-600 text-center">About</a>
+                <a href="#service" class="py-2 px-4 w-full text-white hover:bg-green-600 text-center">Services</a>
+                <a href="#contact" class="py-2 px-4 w-full text-white hover:bg-green-600 text-center">Contact</a>
             </nav>
 
             <!-- Desktop Navbar -->
             <nav id="navbar" class="hidden md:flex space-x-6 items-center text-lg">
-                <a class="text-gray-800 hover:text-green-600" href="#home">Home</a>
-                <a class="text-gray-800 hover:text-green-600" href="#profil-daerah">Profil Daerah</a>
-                <a class="text-gray-800 hover:text-green-600" href="#news">News</a>
-                <a class="text-gray-800 hover:text-green-600" href="#about">About</a>
-                <a class="text-gray-800 hover:text-green-600" href="#services">Service</a>
-                <a class="text-gray-800 hover:text-green-600" href="#contact">Contact</a>
+                <a class="text-white hover:text-green-200" href="#home">Home</a>
+                <a class="text-white hover:text-green-200" href="#profil-daerah">Profil Daerah</a>
+                <a class="text-white hover:text-green-200" href="#news">News</a>
+                <a class="text-white hover:text-green-200" href="#about">About</a>
+                <a class="text-white hover:text-green-200" href="#service">Service</a>
+                <a class="text-white hover:text-green-200" href="#contact">Contact</a>
             </nav>
 
             <!-- Social Media Icons -->
-            <div class="hidden md:flex space-x-4 text-gray-800">
-                <a href="#" class="hover:text-gray-600"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-gray-600"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-gray-600"><i class="fab fa-pinterest"></i></a>
-                <a href="#" class="hover:text-gray-600"><i class="fab fa-instagram"></i></a>
+            <div class="hidden md:flex space-x-4 text-white">
+                <a href="#" class="hover:text-green-200"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-green-200"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-green-200"><i class="fab fa-pinterest"></i></a>
+                <a href="#" class="hover:text-green-200"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </header>
@@ -68,42 +66,56 @@
 
     <section class="py-16 bg-white">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105 overflow-hidden">
                 <h3 class="text-green-600 text-lg mb-2 font-bold">Luas Daerah</h3>
-                <p class="text-6xl p-3">± 510.300</p>
+                <p class="text-6xl p-3 animate-number" data-value="510300">0</p>
                 <h2 class="mt-4">Ha</h2>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105 overflow-hidden">
                 <h3 class="text-green-600 text-lg mb-2 text-strong font-bold">Penduduk</h3>
-                <p class="text-6xl p-3">± 68.147</p>
+                <p class="text-6xl p-3 animate-number" data-value="68147">0</p>
                 <h2 class="mt-4">Jiwa</h2>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 ease-in transform hover:scale-105 overflow-hidden">
                 <h3 class="text-green-600 text-lg mb-2 font-semibold">Dusun</h3>
-                <p class="text-6xl p-3">4</p>
+                <p class="text-6xl p-3 animate-number" data-value="4">0</p>
+                <h2 class="mt-4">Dusun</h2>
             </div>
         </div>
     </section>
 
     <!-- Profile-daerah -->
-    <section id="profile-daerah" class="bg-gray-100 py-16">
+    <section id="profile-daerah" class="py-16">
         <div class="container mx-auto bg-white bg-opacity-50 rounded-lg shadow-lg p-6">
-            <h1 class="text-2xl font-bold text-center mb-4">Profil Desa</h1>
-            <div class="flex space-x-4 border-b border-gray-200 pb-2 mb-4">
-                <button id="btn-sejarah" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('sejarah', 'btn-sejarah')">Sejarah</button>
-                <button id="btn-geografi" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('geografi', 'btn-geografi')">Geografi</button>
-                <button id="btn-demografi" class="transition duration-300 ease-in-out text-gray-600 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400" onclick="showContent('demografi', 'btn-demografi')">Demografi</button>
+            <h1 class="text-4xl font-bold text-center mb-8">Profil Desa Pagelaran</h1>
+            
+            <div class="flex justify-center space-x-4 mb-8">
+                <button onclick="showTab('sejarah')" id="sejarah-tab" class="tab-button active">
+                    <i class="fas fa-landmark mr-2"></i>Sejarah
+                </button>
+                <button onclick="showTab('geografi')" id="geografi-tab" class="tab-button">
+                    <i class="fas fa-map-marker-alt mr-2"></i>Geografi
+                </button>
+                <button onclick="showTab('demografi')" id="demografi-tab" class="tab-button">
+                    <i class="fas fa-users mr-2"></i>Demografi
+                </button>
             </div>
-            <!-- Konten scrollable -->
-            <div class="overflow-y-scroll h-[300px] pr-4 custom-scrollbar">
-                <div id="sejarah" class="text-gray-800">
-                    <p class="mb-4">Nama <strong>Pagelaran</strong> berasal dari praktik pertemuan masyarakat yang dilakukan di atas tikar (gelaran) di tengah desa. Sejarah mencatat bahwa pada tahun 1800-an, wilayah ini terbagi menjadi tiga desa, yaitu Desa Banjerejo, Desa Pagelaran, dan Desa Kademangan. Desa ini mengalami migrasi penduduk dari Yogyakarta pada tahun 1825-1830 setelah Perang Diponegoro dan letusan Gunung Merapi pada tahun 1914. Pengaruh budaya Yogyakarta masih terlihat dalam seni dan tradisi masyarakat setempat, termasuk seni karawitan dan tari</p>
+
+            <div id="tab-content" class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md min-h-[300px]">
+                <div id="sejarah-content" class="tab-content active">
+                    <p class="text-gray-800 leading-relaxed">
+                        Nama <strong>Pagelaran</strong> berasal dari praktik pertemuan masyarakat yang dilakukan di atas tikar (gelaran) di tengah desa. Sejarah mencatat bahwa pada tahun 1800-an, wilayah ini terbagi menjadi tiga desa, yaitu Desa Banjerejo, Desa Pagelaran, dan Desa Kademangan. Desa ini mengalami migrasi penduduk dari Yogyakarta pada tahun 1825-1830 setelah Perang Diponegoro dan letusan Gunung Merapi pada tahun 1914. Pengaruh budaya Yogyakarta masih terlihat dalam seni dan tradisi masyarakat setempat, termasuk seni karawitan dan tari.
+                    </p>
                 </div>
-                <div id="geografi" class="text-gray-800 hidden">
-                    <p class="mb-4 leading-relaxed">Desa Pagelaran merupakan salah satu dari 10 desa yang ada dalam wilayah Kecamatan Pagelaran, Kabupaten Malang. Jarak Desa Pagelaran dari kota Malang adalah 30 km, luas wilayahnya 510.300 Ha. Desa Pagelaran terdapat 4 dukuh/dusun : Dusun Sipring, Dusun Krajan, Dusun Mentaraman dan Dusun Sumbergempol, serta ada 7 RW dan 37 RT. <br> <strong>Batas Wilayah Desa/Kelurahan</strong> <br> Batas Desa Pagelaran : <br> Sebelah Utara : Desa Banjarejo <br> Sebelah Timur : Desa Sidorejo <br> Sebelah Selatan : Desa Suwaru <br> Sebelah Barat : Desa Kademangan <br> Di Desa Pagelaran batas antar dusun juga sudah jelas, karena terdapat gapura pembatas tiap dusun di Desa Pagelaran. <br> <strong>1. Keadaan Tanah, Luas Penggunaan Tanah, Curah Hujan, dan Keadaan Air.</strong> <br> Keadaan tanah di Desa Pagelaran menurut kesuburunnya ada 3 yaitu tanah sangat subur, subur, dan sedang. Tanah di daerah Desa Pagelaran digunakan sebagai kerajinan gerabah warga. <br> Luas tanah di Desa Pagelaran 510.300 Ha. Digunakan sebagai Pemukiman seluas 114 Ha, Bangunan seluas 1,15 Ha, Pertanian / Sawah seluas 162 Ha, Ladang/ Tegalan seluas 80 Ha, tempat olahraga dan rekreasi seluas 0,87 Ha, dan untuk Perikanan seluas 0,5 Ha. <br> Ketinggian Desa Pagelaran dari permukaan laut 890m Dpl. Keadaan suhu rata-rata di Desa Pagelaran 20°C. Curah hujan Desa Pagelaran 1.500 mm/th. <br> Keadaan air di Desa Pagelara n bersih dan tidak pernah terjadi kekeringan di saat musim kemarau tiba. Karena, air di dapatkan dari sumber. Sehingga, untuk air pertanian warga Desa Pagelaran tidak kesusahan untuk masalah pengairan. <br> <strong>2. keadaan Pertanian, Perkebunan, Kehutanan dan Tanaman Pangan</strong> <br> Dalam sektor pertanian lahan di Desa Pagelaran rata-rata ditanami padi, tebi, kacang-kacangan, dan sebagian ada yang ditanami buah-buahan, seperti : salak, buah pepaya, dll. Ada pula tanaman apotek hidup yang ditanam di sebagian rumah warga. Di Desa Pagelaran terdapat KUD yang aktif dalam memasarkan hasil pertanian dan perkebunan warga. Tetapi, KUD tidak melayani simpan pinjam. Warga dapat mendapatkan pinjaman ke Koperasi Simpan Pinjam ataupun Bank. Di Desa Pagelaran ini terdapat 5 Kelompok tani,rejeki yang aktif hanya lah 2 Kelompok Tani. Nama kelompok tani di Desa Pagelaran adalah Sumber Rejeki 1 dan Sumber Rejeki 2. Jenis tanaman yang terdapat kelompok tani ini adalah jenis palawija dan padi. Terdapat 125 anggota pada kelompok tani sumber rejeki 1 dan 87 anggota untuk kelompok tani sumber rejeki 2. <br> <strong>3. Keadaan Peternakan dan Perikanan</strong><br>Warga Desa Pagelaran sebagian warganya berternak dan budidaya ikan. Hewwwan yang diternak warga Desa Pagelaran diantaranya sapi, kambing, ayam, dan itik. Dan terdapat warga yang budidaya ikan lele dumbo. Produksi yang dihasilkan diantaranya daging ayam, telur ayam, lelem dll. Desa Pagelaran memiliki 17 kolam perikanan. <strong></strong> </p>
+                <div id="geografi-content" class="tab-content hidden">
+                    <p class="text-gray-800 leading-relaxed">
+                        Desa Pagelaran merupakan salah satu dari 10 desa yang ada dalam wilayah Kecamatan Pagelaran, Kabupaten Malang. Jarak Desa Pagelaran dari kota Malang adalah 30 km, luas wilayahnya 510.300 Ha. Desa Pagelaran terdapat 4 dukuh/dusun : Dusun Sipring, Dusun Krajan, Dusun Mentaraman dan Dusun Sumbergempol, serta ada 7 RW dan 37 RT. <br> <strong>Batas Wilayah Desa/Kelurahan</strong> <br> Batas Desa Pagelaran : <br> Sebelah Utara : Desa Banjarejo <br> Sebelah Timur : Desa Sidorejo <br> Sebelah Selatan : Desa Suwaru <br> Sebelah Barat : Desa Kademangan <br> Di Desa Pagelaran batas antar dusun juga sudah jelas, karena terdapat gapura pembatas tiap dusun di Desa Pagelaran. <br> <strong>1. Keadaan Tanah, Luas Penggunaan Tanah, Curah Hujan, dan Keadaan Air.</strong> <br> Keadaan tanah di Desa Pagelaran menurut kesuburunnya ada 3 yaitu tanah sangat subur, subur, dan sedang. Tanah di daerah Desa Pagelaran digunakan sebagai kerajinan gerabah warga. <br> Luas tanah di Desa Pagelaran 510.300 Ha. Digunakan sebagai Pemukiman seluas 114 Ha, Bangunan seluas 1,15 Ha, Pertanian / Sawah seluas 162 Ha, Ladang/ Tegalan seluas 80 Ha, tempat olahraga dan rekreasi seluas 0,87 Ha, dan untuk Perikanan seluas 0,5 Ha. <br> Ketinggian Desa Pagelaran dari permukaan laut 890m Dpl. Keadaan suhu rata-rata di Desa Pagelaran 20°C. Curah hujan Desa Pagelaran 1.500 mm/th. <br> Keadaan air di Desa Pagelara n bersih dan tidak pernah terjadi kekeringan di saat musim kemarau tiba. Karena, air di dapatkan dari sumber. Sehingga, untuk air pertanian warga Desa Pagelaran tidak kesusahan untuk masalah pengairan. <br> <strong>2. keadaan Pertanian, Perkebunan, Kehutanan dan Tanaman Pangan</strong> <br> Dalam sektor pertanian lahan di Desa Pagelaran rata-rata ditanami padi, tebi, kacang-kacangan, dan sebagian ada yang ditanami buah-buahan, seperti : salak, buah pepaya, dll. Ada pula tanaman apotek hidup yang ditanam di sebagian rumah warga. Di Desa Pagelaran terdapat KUD yang aktif dalam memasarkan hasil pertanian dan perkebunan warga. Tetapi, KUD tidak melayani simpan pinjam. Warga dapat mendapatkan pinjaman ke Koperasi Simpan Pinjam ataupun Bank. Di Desa Pagelaran ini terdapat 5 Kelompok tani,rejeki yang aktif hanya lah 2 Kelompok Tani. Nama kelompok tani di Desa Pagelaran adalah Sumber Rejeki 1 dan Sumber Rejeki 2. Jenis tanaman yang terdapat kelompok tani ini adalah jenis palawija dan padi. Terdapat 125 anggota pada kelompok tani sumber rejeki 1 dan 87 anggota untuk kelompok tani sumber rejeki 2. <br> <strong>3. Keadaan Peternakan dan Perikanan</strong><br>Warga Desa Pagelaran sebagian warganya berternak dan budidaya ikan. Hewwwan yang diternak warga Desa Pagelaran diantaranya sapi, kambing, ayam, dan itik. Dan terdapat warga yang budidaya ikan lele dumbo. Produksi yang dihasilkan diantaranya daging ayam, telur ayam, lelem dll. Desa Pagelaran memiliki 17 kolam perikanan. 
+                    </p>
                 </div>
-                <div id="demografi" class="text-gray-800 hidden">
-                    Jumlah penduduk Desa Pagelaran sekitar 8.338 jiwa, terdiri dari 4.098 laki-laki dan 4.240 perempuan. Terdapat sekitar 2.671 Kepala Keluarga dengan kepadatan penduduk sekitar 23 jiwa per hektardengan sedikit populasi beragama Katolik. Etnis yang dominan adalah Jawa (4.156 jiwa) dan Madura (2.491 jiwa). Dan ekonomi masyarakat desa ini sebagian besar bergantung pada pertanian dengan komoditas seperti padi, tebu, dan berbagai jenis sayuran serta buah-buahan. Selain itu, kerajinan gerabah juga menjadi salah satu sumber pendapatan utama masyarakat </p>
+                <div id="demografi-content" class="tab-content hidden">
+                    <p class="text-gray-800 leading-relaxed">
+                        Jumlah penduduk Desa Pagelaran sekitar 8.338 jiwa, terdiri dari 4.098 laki-laki dan 4.240 perempuan. Terdapat sekitar 2.671 Kepala Keluarga dengan kepadatan penduduk sekitar 23 jiwa per hektardengan sedikit populasi beragama Katolik. Etnis yang dominan adalah Jawa (4.156 jiwa) dan Madura (2.491 jiwa). Dan ekonomi masyarakat desa ini sebagian besar bergantung pada pertanian dengan komoditas seperti padi, tebu, dan berbagai jenis sayuran serta buah-buahan. Selain itu, kerajinan gerabah juga menjadi salah satu sumber pendapatan utama masyarakat
+                    </p>
                 </div>
             </div>
         </div>
@@ -113,38 +125,36 @@
     <section id="news" class="bg-gray-100 flex items-center justify-center">
         <div class="bg-white bg-opacity-50 shadow-lg p-6 mx-4 my-auto w-full rounded-lg shadow-lg">
             <div class="max-w-4xl mx-auto py-12 px-4">
-                <h1 class="text-4xl font-bold text-center mb-4">News</h1>
+                <h1 class="text-4xl font-bold mb-4 text-center">News</h1>
                 <p class="text-center text-gray-500 mb-12">
-                Pagelaran, Kab. Malang
+                    Pagelaran, Kab. Malang
                 </p>
                 <div class="space-y-12">
                     <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
-                        <img alt="Abstract 3D shapes on a platform" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6" height="300" src="assets/image/kebakaran.png" width="400"/>
+                        <img alt="Abstract 3D shapes on a platform" class="w-64 h-64 object-cover rounded-lg mb-4 md:mb-0 md:mr-6" src="assets/image/kebakaran.png"/>
                         <div>
-                            <h2 class="text-2xl font-bold mt-2">Satu Malam, Dua Kali Kebakaran di Kabupaten Malang, Akibat Korsleting List dan Bakar Sampah.
-                            </h2>
-                            <p class="text-red-600 mt-2">Mahmudan · 15 November 2024</p>
+                            <h2 class="text-2xl font-bold mt-2">Satu Malam, Dua Kali Kebakaran di Kabupaten Malang, Akibat Korsleting List dan Bakar Sampah.</h2>
+                            <p class="text-gray-500 mt-2">Mahmudan · 15 November 2024</p>
                         </div>
                     </div>
                     <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
-                        <img alt="Code editor with code on the screen" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6" height="300" src="assets/image/lomba.png" width="400"/>
+                        <img alt="Code editor with code on the screen" class="w-64 h-64 object-cover rounded-lg mb-4 md:mb-0 md:mr-6" src="assets/image/lomba.jpg"/>
                         <div>
                             <h2 class="text-2xl font-bold mt-2">Memicu Inovasi dan Kreasi, Camat Pagelaran Dorong Pemdes Ikut Lomba Desa</h2>
                             <p class="text-gray-500 mt-2">Ashaq Lupito · 14 Maret 2024</p>
                         </div>
                     </div>
                     <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
-                        <img alt="Abstract 3D shapes on a platform" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6" height="300" src="assets/image/angin.png" width="400"/>
+                        <img alt="Abstract 3D shapes on a platform" class="w-64 h-64 object-cover rounded-lg mb-4 md:mb-0 md:mr-6" src="assets/image/angin.jpeg"/>
                         <div>
                             <h2 class="text-2xl font-bold mt-2">Bantuan Korban Angin Kencang</h2>
                             <p class="text-gray-500 mt-2">Redaksi Javasatu · 05 November 2024</p>
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
     
     <section id="about">
         <div class="bg-gray-100 flex items-center justify-center my-5"> 
