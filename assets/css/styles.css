@@ -130,7 +130,6 @@ body {
   @apply bg-green-600 text-white shadow-lg;
 }
 
-/* animasi angka */
 @keyframes numberAnimation {
   0% {
     opacity: 0;
