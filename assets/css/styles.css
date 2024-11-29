@@ -144,3 +144,18 @@ body {
 .animate-number {
   animation: numberAnimation 1s ease-out;
 }
+
+#Berita img {
+  width: 100%; /* Pastikan gambar memenuhi lebar kontainernya */
+  height: 200px; /* Tinggi gambar tetap */
+  object-fit: cover; /* Potong gambar agar pas dengan ukuran */
+  border-radius: 0.5rem; /* Pastikan sudut tetap membulat */
+}
+
+/* Tambahkan gaya khusus untuk layar yang lebih besar */
+@media (min-width: 768px) {
+  #Berita img {
+      width: 200px; /* Lebar gambar tetap pada mode desktop */
+      height: 150px; /* Tinggi gambar tetap pada mode desktop */
+  }
+}

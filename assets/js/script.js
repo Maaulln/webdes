@@ -18,58 +18,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
   // profil-daerah
-function showTab(tabName) {
-    document.querySelectorAll(".tab-button").forEach((btn) => {
-    btn.classList.remove("active");
-    });
-    document.querySelectorAll(".tab-content").forEach((content) => {
-    content.classList.remove("active");
-    content.classList.add("hidden");
-    });
-
-    document.getElementById(`${tabName}-tab`).classList.add("active");
-    let activeContent = document.getElementById(`${tabName}-content`);
-    activeContent.classList.remove("hidden");
-    activeContent.classList.add("active");
-}
-
-showTab("sejarah");
-
-document.addEventListener("DOMContentLoaded", () => {
-    const animatedNumbers = document.querySelectorAll(".animate-number");
-
-    const animateNumber = (element) => {
-    const value = parseInt(element.getAttribute("data-value"));
-    const duration = 1500;
-    const interval = 50;
-    const steps = duration / interval;
-    const increment = value / steps;
-
-    let currentValue = 0;
-    const updateNumber = () => {
-        currentValue += increment;
-        if (currentValue < value) {
-        element.textContent = Math.round(currentValue).toLocaleString();
-        requestAnimationFrame(updateNumber);
-        } else {
-        element.textContent = value.toLocaleString();
-        }
-    };
-
-    updateNumber();
-    };
-
-    const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            animatedNumbers.forEach(animateNumber);
-            observer.unobserve(entry.target);
-        }
+    function showTab(tabId) {
+        const tabContents = document.querySelectorAll('.tab-content');
+        const tabButtons = document.querySelectorAll('.tab-button');    
+        tabContents.forEach(content => content.classList.add('hidden'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        tabButtons.forEach(button => {
+            button.classList.remove('bg-green-600', 'text-white');
+            button.classList.add('bg-gray-200', 'text-gray-700');
         });
-    },
-    { threshold: 0.1 }
-    );
+    
+        document.getElementById(`${tabId}-content`).classList.remove('hidden');
+        document.getElementById(`${tabId}-content`).classList.add('active');    
+        document.getElementById(`${tabId}-tab`).classList.add('bg-green-600', 'text-white');
+        document.getElementById(`${tabId}-tab`).classList.remove('bg-gray-200', 'text-gray-700');
+    }
 
-    observer.observe(document.querySelector("section"));
-});
+    // animasi-number
+    document.querySelectorAll('.animate-number').forEach(el => {
+        const value = +el.dataset.value;
+        let start = 0;
+        const increment = Math.ceil(value / 100);
+        const interval = setInterval(() => {
+            start += increment;
+            el.textContent = start > value ? value : start;
+            if (start >= value) clearInterval(interval);
+        }, 15);
+    });
